@@ -1,3 +1,12 @@
 <app-nav></app-nav>
-Kullanıcı adı:<input type="text" [(ngModel)]="username">
-{{username}}
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users">{{user.x}} {{user.y}}</li>
+  </ul>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">Ad Soyad</span>
+    </div>
+    <input type="text" [(ngModel)]= "firstname" class="form-control"  >
+    <input type="text" [(ngModel)]="lastname"  class="form-control">
+  </div>
+<button class="btn btn-success" (click) = "addUser(firstname,lastname)">Ekle</button>
